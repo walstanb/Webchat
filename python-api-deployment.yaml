@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: python-api
+  labels:
+    app: python-api
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: python-api
+  template:
+    metadata:
+      labels:
+        app: python-api
+    spec:
+      containers:
+        - name: python-api
+          image: python-api
+          ports:
+            - containerPort: 5000
+          env:
+          - name: MONGO_URL
+            value: mongodb://mongodb:27017/chat
+          - name: MONGO_DBNAME
+            value: chat
