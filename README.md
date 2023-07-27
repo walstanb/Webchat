@@ -2,7 +2,7 @@
 
 ![](demo/ui-demo.gif)
 
-This is a chat application built with React, Fontend, and Python API as the backend. It allows users to communicate in real-time using a chat interface.
+This is a chat application built with React as the frontend and Python FastAPI as the backend. It allows users to communicate in real-time using a chat interface.
 
 ## Quick Start with Development Server
 
